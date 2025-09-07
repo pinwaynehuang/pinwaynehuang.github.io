@@ -2,10 +2,108 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="utf-8" />
-  <title>我的 GitHub Pages</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>黃品文 | GitHub 個人頁</title>
+  <meta name="description" content="Hello! 我是黃品文，這是我的 GitHub 頁面。學歷：國立臺北大學 企業管理學系、國立臺北大學 金融與合作經營研究所。聯絡方式：pinwaynehuang@gmail.com">
+  <meta name="color-scheme" content="light dark" />
+  <style>
+    :root{
+      --bg:#0b1220; --panel:#0f1930; --border:rgba(255,255,255,.10);
+      --text:#e8f0ff; --muted:#a8b6d6; --brand:#69a3ff; --brand2:#8de0ff;
+      --shadow:0 12px 30px rgba(0,0,0,.28); --r:18px; --max:980px;
+    }
+    *{box-sizing:border-box} html,body{margin:0}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans TC","PingFang TC","Helvetica Neue",Arial,sans-serif;
+      background:linear-gradient(180deg,#091126, #0b162b 48%, #0e1d34 100%);
+      color:var(--text); line-height:1.65; -webkit-font-smoothing:antialiased;
+    }
+    .container{max-width:var(--max);margin:0 auto;padding:28px 20px 60px}
+    .card{
+      background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.03));
+      border:1px solid var(--border); border-radius:var(--r); box-shadow:var(--shadow);
+    }
+    .header{padding:28px; display:grid; grid-template-columns:72px 1fr; gap:18px; align-items:center}
+    .avatar{
+      width:72px;height:72px;border-radius:16px;
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      box-shadow:0 6px 18px rgba(110,170,255,.35);
+    }
+    h1{margin:0;font-size:28px;line-height:1.25}
+    .sub{color:var(--muted);margin-top:6px}
+    .section{margin-top:18px;padding:22px 28px;border-top:1px solid var(--border)}
+    .sec-title{margin:0 0 10px;font-size:18px;letter-spacing:.3px}
+    /* Education timeline */
+    .edu{display:grid;gap:10px}
+    .item{
+      display:grid;grid-template-columns:18px 1fr;gap:12px;align-items:start;
+    }
+    .dot{width:10px;height:10px;margin-top:8px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--brand2))}
+    .item h3{margin:0 0 2px;font-size:16px}
+    .item small{color:var(--muted)}
+    /* Contact */
+    .links{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;padding:11px 14px;border-radius:12px;
+      font-weight:700;color:#051228;background:linear-gradient(135deg,var(--brand),var(--brand2));
+      border:0;text-decoration:none;box-shadow:0 10px 26px rgba(120,170,255,.35)
+    }
+    .btn--ghost{
+      background:transparent;color:#dfe7ff;border:1px solid var(--border);box-shadow:none
+    }
+    footer{margin-top:16px;text-align:center;color:var(--muted);font-size:13px}
+    @media (max-width:640px){ .header{grid-template-columns:56px 1fr}.avatar{width:56px;height:56px} }
+  </style>
 </head>
 <body>
-  <h1>Hello, GitHub Pages!</h1>
-  <p>這是我的第一個 github.io 網頁 🎉</p>
+  <main class="container">
+    <section class="card">
+      <!-- Header -->
+      <div class="header">
+        <div class="avatar" aria-hidden="true"></div>
+        <div>
+          <h1>Hello! 我是黃品文</h1>
+          <p class="sub">這是我的 GitHub 頁面</p>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="section">
+        <h2 class="sec-title">學歷</h2>
+        <div class="edu">
+          <div class="item">
+            <div class="dot" aria-hidden="true"></div>
+            <div>
+              <h3>國立臺北大學　金融與合作經營　研究所</h3>
+              <small>National Taipei University — Graduate Institute of Finance and Cooperative Management</small>
+            </div>
+          </div>
+          <div class="item">
+            <div class="dot" aria-hidden="true"></div>
+            <div>
+              <h3>國立臺北大學　企業管理學系</h3>
+              <small>National Taipei University — Department of Business Administration</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="section">
+        <h2 class="sec-title">聯絡方式</h2>
+        <p class="sub">如有合作、研究交流歡迎來信。</p>
+        <div class="links">
+          <a class="btn" href="mailto:pinwaynehuang@gmail.com">pinwaynehuang@gmail.com</a>
+          <a class="btn btn--ghost" href="https://github.com/pinwaynehuang" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>© <span id="y"></span> 黃品文 · Built with GitHub Pages</footer>
+  </main>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
