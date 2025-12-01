@@ -8,66 +8,128 @@
     body {
       margin: 0;
       font-family: "Noto Sans TC", "PingFang TC", Arial, sans-serif;
-      background: #fdfdfd;
+      background: #f7f8fa;
       color: #333;
-      line-height: 1.6;
+      line-height: 1.7;
     }
     .container {
-      max-width: 820px;
+      max-width: 920px;
       margin: 0 auto;
-      padding: 40px 20px;
+      padding: 36px 20px 50px;
     }
     header {
-      text-align: center;
-      margin-bottom: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 36px;
     }
     header img {
-      width: 180px;
-      height: 220px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
       object-fit: cover;
-      border-radius: 12px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     }
+    .header-text {
+      min-width: 260px;
+      text-align: left;
+    }
     h1 {
-      margin: 20px 0 10px;
+      margin: 0 0 8px;
       font-size: 32px;
       color: #111;
     }
     .subtitle {
-      color: #666;
-      font-size: 18px;
+      margin: 0 0 6px;
+      color: #555;
+      font-size: 16px;
+      font-weight: 500;
     }
+    .tagline {
+      margin: 4px 0 0;
+      color: #777;
+      font-size: 15px;
+    }
+
     section {
-      margin-bottom: 32px;
-      padding: 20px;
+      margin-bottom: 24px;
+      padding: 20px 22px;
       border-radius: 12px;
       background: #fff;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
     }
     h2 {
       margin-top: 0;
+      margin-bottom: 10px;
       color: #2a4d9c;
-      font-size: 22px;
+      font-size: 20px;
     }
+    h3 {
+      margin: 0;
+      font-size: 16px;
+      color: #222;
+    }
+    .meta {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 4px;
+    }
+    p {
+      margin: 4px 0 0;
+    }
+    ul {
+      margin: 4px 0 0;
+      padding-left: 20px;
+    }
+    .grid-two {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px 24px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #e4ebff;
+      color: #2a4d9c;
+      font-size: 12px;
+      margin-right: 6px;
+      margin-top: 4px;
+    }
+
     .contact a {
       display: inline-block;
-      margin-top: 8px;
+      margin-top: 10px;
       padding: 10px 18px;
-      border-radius: 8px;
+      border-radius: 10px;
       background: #2a4d9c;
       color: #fff;
       font-weight: 600;
       text-decoration: none;
       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      transition: background 0.2s ease, transform 0.1s ease;
     }
     .contact a:hover {
       background: #193a7a;
+      transform: translateY(-1px);
     }
+
     footer {
-      margin-top: 50px;
+      margin-top: 40px;
       text-align: center;
       color: #999;
-      font-size: 14px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 640px) {
+      header {
+        align-items: flex-start;
+      }
+      .header-text {
+        text-align: left;
+      }
     }
   </style>
 </head>
@@ -75,25 +137,133 @@
   <div class="container">
     <header>
       <img src="1352771.jpg" alt="黃品文照片">
-      <h1>Hello! 我是黃品文</h1>
-      <p class="subtitle">這是我的 GitHub 頁面</p>
+      <div class="header-text">
+        <h1>黃品文 Wayne Huang</h1>
+        <p class="subtitle">國立臺北大學｜金融與合作經營學系 碩士</p>
+        <p class="tagline">專長：總體經濟 × 固定收益 × AI 金融應用（目標職務：債券交易員）</p>
+      </div>
     </header>
 
+    <!-- 簡介 -->
     <section>
-      <h2>學經歷</h2>
-      <p><strong>國立臺北大學</strong> — 企業管理學系 學士</p>
-      <p><strong>國立臺北大學</strong> — 金融與合作經營學系 碩士</p>
+      <h2>關於我</h2>
+      <p>
+        自大學起便對利率、殖利率曲線與資金流動特別有興趣，一路從財務管理、固定收益到衍生性商品扎實打底，
+        在研究所階段進一步專注於總經循環與債券市場。除了擔任財務相關課程助教與系上行政，亦積極參與基金研究社、
+        金融競賽與國際研討會，累積撰寫多篇總經與產業研究報告的經驗。
+      </p>
+      <p>
+        近年也投入 AI 金融培訓，學習以 Python 與機器學習輔助資料處理與策略分析，希望結合理性研究與科技工具，
+        成為能用數據支撐判斷的債券交易員。
+      </p>
     </section>
 
+    <!-- 學歷 -->
     <section>
-      <h2>證照</h2>
+      <h2>學歷</h2>
+      <p><strong>國立臺北大學</strong> — 金融與合作經營學系 碩士（2023/09 – 2025/06）</p>
+      <p><strong>國立臺北大學</strong> — 企業管理學系 學士（2017/09 – 2021/06）</p>
+    </section>
+
+    <!-- 工作經驗 -->
+    <section>
+      <h2>工作經驗</h2>
+      <div class="grid-two">
+        <div>
+          <h3>財務管理、期貨與選擇權課程助教</h3>
+          <div class="meta">國立臺北大學 · 2023/09 – 2025/06</div>
+          <ul>
+            <li>協助課程規劃與作業、考題設計，輔導學生理解財務報表分析、CAPM、VaR 與避險策略等核心概念。</li>
+            <li>透過題目與案例設計，加深對利率變動、避險操作與市場波動關聯的理解，強化債券與利率產品分析能力。</li>
+          </ul>
+        </div>
+        <div>
+          <h3>行政助理</h3>
+          <div class="meta">國立臺北大學 金融與合作經營學系 · 2023/09 – 2025/05</div>
+          <ul>
+            <li>協助碩士班招生、教師甄試與學術研討會等活動規劃與執行。</li>
+            <li>處理系上公文與行政流程，培養時程控管、溝通協調與細節管理能力。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 研究 / 社團與競賽 -->
+    <section>
+      <h2>研究、社團與競賽</h2>
+      <div>
+        <h3>政大共同基金研究社 NCCU Mutual Fund Club</h3>
+        <div class="meta">2023/06 – 2024/06</div>
+        <ul>
+          <li>撰寫《日本總經分析》、《PCB 產業分析》、《基金評析－野村積極成長基金》等多篇研究報告。</li>
+          <li>整合 IMF、OECD、BOJ、FRED 等資料建立景氣與利率判讀架構，應用於債市與資產配置思考。</li>
+        </ul>
+      </div>
+      <div style="margin-top: 10px;">
+        <h3>證基會國際金融專題競賽 第一名</h3>
+        <div class="meta">2024/03 – 2024/06</div>
+        <p>
+          研究主題為「市場擁擠度對台灣證券市場發散溢價（動量策略）與收斂溢價（價值策略）之影響」，
+          運用 Fama-French 六因子模型與 CoMetric 指標，分析資金擁擠對因子報酬的非對稱效果。
+        </p>
+      </div>
+      <div style="margin-top: 10px;">
+        <h3>校內專題競賽報告 第二名</h3>
+        <div class="meta">2020/09 – 2020/12</div>
+        <p>
+          以欣興電子為個股研究案例，結合財報、價量結構與籌碼變化建立短中期交易策略，強化對市場結構與資金流向的敏感度。
+        </p>
+      </div>
+    </section>
+
+    <!-- 活動與國際經驗 -->
+    <section>
+      <h2>活動與國際經驗</h2>
       <ul>
-        <li>證券商高級業務員</li>
-        <li>投信投顧業務員</li>
-        <li>金融市場常識與職業道德</li>
+        <li><strong>經濟部 AI 新秀培訓計畫（2025）</strong>：學習 Python、機器學習與 AI 工具，將技術應用於資產部位管理試算表與金融詐欺偵測等專題。</li>
+        <li><strong>金融科技競賽協辦（2024）</strong>：協助講者與師長溝通、掌握活動節奏與現場流程。</li>
+        <li><strong>日本早稻田大學學術暨企業參訪（2024）</strong>：就 ESG、CSR 與當地學生交流並發表報告。</li>
+        <li><strong>Japan Forum of Business and Society 國際研討會（2024）</strong>：與各國學者交流企業永續與社會責任議題。</li>
+        <li><strong>啦啦隊總召兼負責人（2018 – 2020）</strong>：帶領系隊獲得兩座冠軍、一座亞軍，培養團隊領導與壓力管理能力。</li>
       </ul>
     </section>
-    
+
+    <!-- 技能 -->
+    <section>
+      <h2>技能</h2>
+      <div class="grid-two">
+        <div>
+          <h3>金融與研究能力</h3>
+          <ul>
+            <li>總體經濟與利率循環分析、殖利率曲線與利差判讀。</li>
+            <li>固定收益與衍生性商品基本定價與避險概念。</li>
+            <li>多資產與基金評析、個股研究與簡報撰寫。</li>
+          </ul>
+        </div>
+        <div>
+          <h3>工具與軟體</h3>
+          <ul>
+            <li>Excel：公式設計、資料視覺化與報表建立。</li>
+            <li>PowerPoint：投資報告與專案簡報排版、圖表化呈現。</li>
+            <li>Word：研究報告與專題文件編排。</li>
+            <li>基礎 Python、機器學習與 AI 工具應用於金融資料分析。</li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top: 8px;">
+        <span class="badge">證券商高級業務員</span>
+        <span class="badge">投信投顧業務員</span>
+        <span class="badge">金融市場常識與職業道德</span>
+      </div>
+    </section>
+
+    <!-- 語言能力 -->
+    <section>
+      <h2>語言能力</h2>
+      <p><strong>英文：</strong> 聽 精通、讀 精通、說 中等、寫 中等｜TOEIC 800</p>
+    </section>
+
+    <!-- 聯絡方式 -->
     <section class="contact">
       <h2>聯絡方式</h2>
       <p>Email: pinwaynehuang@gmail.com</p>
